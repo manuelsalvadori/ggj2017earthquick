@@ -16,7 +16,7 @@ public class TouchRotation : MonoBehaviour {
 				{
                     if (Mathf.Abs(touch.deltaPosition.y) < Mathf.Abs(touch.deltaPosition.x))
                     {
-                        transform.Rotate(0f, -(touch.deltaPosition.x) * rotationRate, 0f, Space.World);
+                        transform.Rotate(0f, touch.deltaPosition.x * rotationRate, 0f, Space.World);
                     }
                     else
                     {
