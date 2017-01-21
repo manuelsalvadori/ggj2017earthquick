@@ -24,7 +24,6 @@ public class Mirino3d : MonoBehaviour
 
         if (Physics.Raycast(raggio, out hit, Mathf.Infinity, layermask))
         {
-            Debug.Log(hit.collider.gameObject.name);
             mirino.position = new Vector3(hit.point.x, mirino.position.y, hit.point.z);
 
         }
