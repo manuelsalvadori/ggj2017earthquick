@@ -14,7 +14,7 @@ public class TouchRotation : MonoBehaviour {
 			{
 				if (touch.phase == TouchPhase.Moved)
 				{
-                    transform.Rotate (-(touch.deltaPosition.x) * rotationRate, -(touch.deltaPosition.x + touch.deltaPosition.y) * rotationRate, 0, Space.World);
+                    transform.Rotate (-(touch.deltaPosition.y) * rotationRate, -(touch.deltaPosition.x) * rotationRate, 0, Space.World);
 				}
 			}
 		}
