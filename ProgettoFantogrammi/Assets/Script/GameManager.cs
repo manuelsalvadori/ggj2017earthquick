@@ -47,14 +47,13 @@ public class GameManager : MonoBehaviour
 
             Debug.DrawLine(hit.point, Vector3.up, Color.white);
             mirino.GetComponent<Player>().Pulse(hit.point);
-
             Debug.Log(hit.collider.gameObject.name);
             if (!hit.collider.tag.Equals("World"))
             {
                 GameObject tmp = GameObject.Instantiate(Effect);
                 tmp.transform.SetParent(world);
-                tmp.transform.position = hit.point;
-                tmp.transform.LookAt(-(world.position - cam));
+                tmp.transform.position = hit.transform.position;
+                tmp.transform.LookAt(cam);
                 tmp.SetActive(true);
                 foreach (ParticleSystem ps in tmp.GetComponentsInChildren<ParticleSystem>())
                 {
