@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4421718148935608}
   - component: {fileID: 198709768531752620}
   - component: {fileID: 199905135252102198}
+  - component: {fileID: 111371842238478784}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -72,6 +73,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &111371842238478784
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1628672660682874}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 24e12059de0bd10468e5633bb2540273, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 24e12059de0bd10468e5633bb2540273, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!198 &198393013264910806
 ParticleSystem:
   m_ObjectHideFlags: 1
