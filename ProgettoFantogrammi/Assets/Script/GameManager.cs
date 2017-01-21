@@ -27,6 +27,10 @@ public class GameManager : MonoBehaviour
         if (Physics.Raycast(raggio, out hit, Mathf.Infinity))
         {
             Debug.Log(hit.collider.gameObject.name);
+            if (!hit.collider.tag.Equals("World"))
+            {
+                Destroy(hit.collider.gameObject);
+            }
         }
     }
 
