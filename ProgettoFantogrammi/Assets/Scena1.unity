@@ -2020,8 +2020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d7f8e71a04647e895069b1d840c643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationRate: 0.8
-  active: 1
+  rotationRate: 10
 --- !u!1 &2023576850 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100038, guid: 04bd3941beac2411db81ffd01e9ea3b7, type: 3}

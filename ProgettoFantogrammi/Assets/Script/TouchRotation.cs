@@ -1,40 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TouchRotation : MonoBehaviour {
+public class TouchRotation : MonoBehaviour
+{
 	
 	public float rotationRate = 1.5f;
-	public bool active = false;
 
-	void Update ()
+	void FixedUpdate ()
 	{
-		if (active)
+		foreach (Touch touch in Input.touches)
 		{
-			foreach (Touch touch in Input.touches)
+			if (touch.phase == TouchPhase.Moved)
 			{
-				if (touch.phase == TouchPhase.Moved)
-				{
-                    /*if (Mathf.Abs(touch.deltaPosition.y) < Mathf.Abs(touch.deltaPosition.x))
-                    {
-                        transform.Rotate(0f, 0f, -(touch.deltaPosition.x * rotationRate), Space.World);
-                    }
-                    else
-                    {
-                        transform.Rotate((touch.deltaPosition.y) * rotationRate, 0f, 0f, Space.World);
-
-                    }*/
-                    transform.Rotate((touch.deltaPosition.y) * rotationRate, 0f,  -(touch.deltaPosition.x * rotationRate), Space.World);
-				}
+                transform.Rotate((touch.deltaPosition.y) * rotationRate * Time.fixedDeltaTime, 0f,  -(touch.deltaPosition.x * rotationRate * Time.fixedDeltaTime), Space.World);
 			}
 		}
-	}
-
-	public void SetActive()
-	{
-		active = true;
-	}
-	public void SetInactive()
-	{
-		active = false;
 	}
 }
