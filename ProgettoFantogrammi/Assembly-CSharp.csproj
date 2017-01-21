@@ -49,6 +49,7 @@
      <Compile Include="Assets\Script\Deformer.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />
      <Compile Include="Assets\Script\LightOrientation.cs" />
+     <Compile Include="Assets\Script\MenuManager.cs" />
      <Compile Include="Assets\Script\Mirino3d.cs" />
      <Compile Include="Assets\Script\Player.cs" />
      <Compile Include="Assets\Script\Shockwave.cs" />
