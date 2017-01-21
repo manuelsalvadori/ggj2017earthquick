@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     public void shoot()
     {
+        Handheld.Vibrate();
         Debug.Log("SHOOOOOOOT!");
         RaycastHit hit;
         Ray raggio = new Ray(cam, world.position - cam);
