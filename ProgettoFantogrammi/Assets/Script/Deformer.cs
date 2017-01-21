@@ -8,60 +8,60 @@ public class Deformer : MonoBehaviour
 	private Vector3[] vertices, startingVertices;
 	private List<Shockwave> shockwaves;
 
-	void Start()
+	void Start ()
 	{		
-		Init();
+		Init ();
 	}
 
-	public void Init()
+	public void Init ()
 	{
-		shockwaves = new List<Shockwave>();
-		mesh = GetComponent<MeshFilter>().mesh;
+		shockwaves = new List<Shockwave> ();
+		mesh = GetComponent<MeshFilter> ().mesh;
 
 		vertices = mesh.vertices;
 		startingVertices = mesh.vertices;
 	}
 
-	public void AddShockwave(Vector3 SWPosition, float SWIntesity, float SWDuration, float SWRange)
+	public void AddShockwave (Shockwave shockwave)
 	{
-		shockwaves.Add(new Shockwave(SWPosition, SWIntesity, SWDuration, SWRange));
+		shockwaves.Add (shockwave);
 	}
 
-	public void ProcessShockwave(Shockwave shockwave)
+	public void ProcessShockwave (Shockwave shockwave)
 	{	
 		float relativeTime = shockwave.currentTime / shockwave.SWDuration;
 		
-		for(int index = 0; index < vertices.Length; index++)
-		{
-			float distanceFromOrigin = Vector3.Distance(shockwave.SWPosition, transform.TransformPoint(startingVertices[index]));
+		for (int index = 0; index < vertices.Length; index++) {
+			float distanceFromOrigin = Vector3.Distance (shockwave.SWPosition, transform.TransformPoint (startingVertices [index]));
 
-			if(distanceFromOrigin < shockwave.SWRange)
-			{
-				Ray ray = new Ray(shockwave.SWPosition, transform.TransformPoint(startingVertices[index]) - shockwave.SWPosition);
-				Debug.DrawRay(ray.origin, ray.direction);
-                Debug.Log("SW");
-                float relativeDistance = 1 - distanceFromOrigin / shockwave.SWRange;
-				float rippleEffect = -Mathf.Sin(relativeTime * Mathf.PI * 2);
-				vertices[index] = startingVertices[index] + ((ray.direction * shockwave.SWIntesity * relativeTime * relativeDistance * rippleEffect) / transform.lossyScale.x);
+			if (distanceFromOrigin < shockwave.SWRange) {
+				Ray ray = new Ray (shockwave.SWPosition, transform.TransformPoint (startingVertices [index]) - shockwave.SWPosition);
+
+				float relativeDistance = 1 - distanceFromOrigin / shockwave.SWRange;
+				float rippleEffect = 
+					-Mathf.Sin (((relativeTime * Mathf.PI * (shockwave.bounceTime * 2)) - (relativeDistance * Mathf.PI * (shockwave.rippleOffset * 2))) *
+					shockwave.rippleFrequency);
+				
+				vertices [index] = startingVertices [index] +
+				((ray.direction * shockwave.SWIntesity * relativeTime * relativeDistance * rippleEffect) / transform.lossyScale.x);
 			}
 
-		} 
+		}  
 
 		mesh.vertices = vertices;
-		mesh.RecalculateBounds();
+		mesh.RecalculateBounds ();
 				
 		shockwave.currentTime -= Time.deltaTime;
 	}
 
 
-	void Update()
+	void Update ()
 	{
-		foreach(Shockwave shockwave in shockwaves)
-		{
-			ProcessShockwave(shockwave);
+		foreach (Shockwave shockwave in shockwaves) {
+			ProcessShockwave (shockwave);
 		}
 
-		shockwaves.RemoveAll(o => o.currentTime <= 0);
+		shockwaves.RemoveAll (o => o.currentTime <= 0);
 	}
 
 }

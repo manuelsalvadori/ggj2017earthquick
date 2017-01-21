@@ -9,16 +9,27 @@ public class GameManager : MonoBehaviour
     public bool hitted = false;
 
     public GameObject Effect;
+    public GameObject mirino;
+
+    public GameObject Raggio;
+    private GameObject clone;
 
     void Start()
     {
         cam = Camera.main.GetComponent<anamorph>().pe;
+        Raggio = GameObject.Instantiate(Raggio);
+        clone = GameObject.Instantiate(Raggio);
     }
 
     void LateUpdate()
     {
         cam = Camera.main.GetComponent<anamorph>().pe;
-        //Debug.DrawRay(cam, world.position - cam, Color.green);
+        Raggio.transform.position = cam;
+        Raggio.transform.LookAt(world.position - cam);
+        clone.transform.position = cam;
+        clone.transform.LookAt(world.position - cam);
+
+        Debug.DrawRay(cam, world.position - cam, Color.green);
     }
 
     public void shoot()
@@ -30,8 +41,10 @@ public class GameManager : MonoBehaviour
         Ray raggio = new Ray(cam, world.position - cam);
         int layermask = 1 << 8;
         layermask = ~layermask;
-        if (Physics.Raycast(raggio, out hit, Mathf.Infinity,layermask))
+        if (Physics.Raycast(raggio, out hit, Vector3.Distance(world.position,cam),layermask))
         {
+            Debug.DrawLine(hit.point, Vector3.up, Color.white);
+            mirino.GetComponent<Player>().Pulse(hit.point);
             Debug.Log(hit.collider.gameObject.name);
             if (!hit.collider.tag.Equals("World"))
             {
