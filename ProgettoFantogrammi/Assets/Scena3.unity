@@ -3580,11 +3580,6 @@ MonoBehaviour:
   Effect: {fileID: 1354233549281776, guid: 70008c92c6c206d4fa7e7cce7ae8484c, type: 2}
   mirino: {fileID: 50}
   Raggio: {fileID: 100002, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
-  clock: {fileID: 730536531}
-  m_N_Citta: 7
-  m_Secondi: 10
-  m_current_touch: 0
-  m_current_city: 0
 --- !u!114 &222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4518,15 +4513,15 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 75
+    m_FontSize: 184
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 298
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 0
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 00:00:00
@@ -4893,7 +4888,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counterTime: 0
   isPaused: 0
-  testo: {fileID: 416354907}
 --- !u!4 &730536532
 Transform:
   m_ObjectHideFlags: 0
