@@ -2,15 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuManager : MonoBehaviour {
+public class MenuManager : MonoBehaviour
+{
+    public GameObject mainMenu;
+    public GameObject selectMenu;
+    public GameObject models;
+    public GameObject[] worlds;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void startButton()
+    {
+        mainMenu.SetActive(false);
+        selectMenu.SetActive(true);
+        models.SetActive(true);
+    }
+
+    public void credits()
+    {
+        
+    }
+
+    public void selectWorld()
+    {
+        
+    }
+
+    public void next()
+    {
+
+    }
+
+    public void previous()
+    {
+        
+    }
 }
