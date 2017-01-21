@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
             if (!hit.collider.tag.Equals("World"))
             {
                 GameObject tmp = GameObject.Instantiate(Effect);
+                tmp.transform.SetParent(world);
                 tmp.transform.position = hit.point;
                 tmp.transform.LookAt(-(world.position - cam));
                 tmp.SetActive(true);
