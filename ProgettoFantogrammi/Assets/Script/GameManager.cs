@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     public void shoot()
     {
+        Handheld.Vibrate();
         Debug.Log("SHOOOOOOOT!");
         hitted = true;
         RaycastHit hit;
