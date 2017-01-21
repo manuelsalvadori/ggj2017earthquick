@@ -13,6 +13,7 @@ public class anamorph : MonoBehaviour {
 	public Transform corner_BL;
 	public Transform corner_BR;
 
+    public Vector3 pe;
 
 	public Transform lookTarget;
 
@@ -43,7 +44,7 @@ public class anamorph : MonoBehaviour {
 		vm [1, 3] = (dz*at1.y - theCam.transform.position.z); //aggiorno il vettore vista nella view matrix in base all'accelerometro
 		vm [0, 3] = (dx*at1.x - theCam.transform.position.x);
 
-		Vector3 pe = new Vector3 (); //posizione vettore vista
+		pe = new Vector3 (); //posizione vettore vista
 
 		pe.x = -vm [0 ,3];
 		pe.y = -vm [2, 3];
