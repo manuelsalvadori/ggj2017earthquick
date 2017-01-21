@@ -1,0 +1,183 @@
+fileFormatVersion: 2
+guid: 04bd3941beac2411db81ffd01e9ea3b7
+timeCreated: 1485001265
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: abitazione_1
+    100002: abitazione_2
+    100004: abitazione_3
+    100006: ambientazione_4
+    100008: Box001
+    100010: Box002
+    100012: Box003
+    100014: Box004
+    100016: Box005
+    100018: Box006
+    100020: Box007
+    100022: Box008
+    100024: Box009
+    100026: Box011
+    100028: Box012
+    100030: Box013
+    100032: Box014
+    100034: Box015
+    100036: Box017
+    100038: Box018
+    100040: Box019
+    100042: GeoSphere001
+    100044: terra
+    100046: terra 1
+    100048: //RootNode
+    400000: abitazione_1
+    400002: abitazione_2
+    400004: abitazione_3
+    400006: ambientazione_4
+    400008: Box001
+    400010: Box002
+    400012: Box003
+    400014: Box004
+    400016: Box005
+    400018: Box006
+    400020: Box007
+    400022: Box008
+    400024: Box009
+    400026: Box011
+    400028: Box012
+    400030: Box013
+    400032: Box014
+    400034: Box015
+    400036: Box017
+    400038: Box018
+    400040: Box019
+    400042: GeoSphere001
+    400044: terra
+    400046: terra 1
+    400048: //RootNode
+    2300000: Box001
+    2300002: Box002
+    2300004: Box003
+    2300006: Box004
+    2300008: Box005
+    2300010: Box006
+    2300012: Box007
+    2300014: Box008
+    2300016: Box009
+    2300018: Box011
+    2300020: Box012
+    2300022: Box013
+    2300024: Box014
+    2300026: Box015
+    2300028: Box017
+    2300030: Box018
+    2300032: Box019
+    2300034: GeoSphere001
+    2300036: terra 1
+    3300000: Box001
+    3300002: Box002
+    3300004: Box003
+    3300006: Box004
+    3300008: Box005
+    3300010: Box006
+    3300012: Box007
+    3300014: Box008
+    3300016: Box009
+    3300018: Box011
+    3300020: Box012
+    3300022: Box013
+    3300024: Box014
+    3300026: Box015
+    3300028: Box017
+    3300030: Box018
+    3300032: Box019
+    3300034: GeoSphere001
+    3300036: terra 1
+    4300000: GeoSphere001
+    4300002: terra
+    4300004: Box001
+    4300006: Box004
+    4300008: Box002
+    4300010: Box003
+    4300012: Box005
+    4300014: Box007
+    4300016: Box009
+    4300018: Box008
+    4300020: Box006
+    4300022: Box019
+    4300024: Box018
+    4300026: Box017
+    4300028: Box015
+    4300030: Box012
+    4300032: Box011
+    4300034: Box014
+    4300036: Box013
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
