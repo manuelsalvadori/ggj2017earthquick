@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     Vector3 cam;
     public Transform world;
+    public bool hitted = false;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
     {
         Handheld.Vibrate();
         Debug.Log("SHOOOOOOOT!");
+        hitted = true;
         RaycastHit hit;
         Ray raggio = new Ray(cam, world.position - cam);
         int layermask = 1 << 8;
