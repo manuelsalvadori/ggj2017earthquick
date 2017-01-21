@@ -71,7 +71,9 @@ public class GameManager : MonoBehaviour
 
     IEnumerator shutParticle(GameObject o)
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
+        o.transform.GetChild(0).GetComponent<Animation>().Play();
+        yield return new WaitForSeconds(2f);
         foreach (ParticleSystem ps in o.GetComponentsInChildren<ParticleSystem>())
         {
             ps.Stop();
