@@ -6,6 +6,7 @@
 **/[Bb]uilds/*
 **/UnityGenerated/*
 **/Assets/AssetStoreTools*
+*.userprefs
  
 # ----[ Visual Studio / MonoDevelop generated ]------- #
 ExportedObj/
