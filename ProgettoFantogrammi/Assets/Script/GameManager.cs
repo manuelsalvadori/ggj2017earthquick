@@ -24,10 +24,11 @@ public class GameManager : MonoBehaviour
     void LateUpdate()
     {
         cam = Camera.main.GetComponent<anamorph>().pe;
+        RaycastHit hitted;
         Raggio.transform.position = cam;
-        Raggio.transform.LookAt(world.position - cam);
+        Raggio.transform.LookAt(world.position);
         clone.transform.position = cam;
-        clone.transform.LookAt(world.position - cam);
+        clone.transform.LookAt(world.position);
 
         Debug.DrawRay(cam, world.position - cam, Color.green);
     }
@@ -43,8 +44,10 @@ public class GameManager : MonoBehaviour
         layermask = ~layermask;
         if (Physics.Raycast(raggio, out hit, Vector3.Distance(world.position,cam),layermask))
         {
+
             Debug.DrawLine(hit.point, Vector3.up, Color.white);
             mirino.GetComponent<Player>().Pulse(hit.point);
+
             Debug.Log(hit.collider.gameObject.name);
             if (!hit.collider.tag.Equals("World"))
             {
