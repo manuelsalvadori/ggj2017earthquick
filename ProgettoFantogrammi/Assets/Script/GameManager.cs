@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
     {
 
         GetComponents<AudioSource>()[1].Play();
-        Handheld.Vibrate();
+        //Handheld.Vibrate();
         Debug.Log("SHOOOOOOOT!");
         hitted = true;
         RaycastHit hit;
@@ -141,6 +141,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2.2f);
         Destroy(button);
+        GetComponents<AudioSource>()[3].Play();
         explosion.SetActive(true);
         yield return new WaitForSeconds(0.8f);
         world.gameObject.SetActive(false);
