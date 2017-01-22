@@ -15,6 +15,11 @@ public class GameManager : MonoBehaviour
     public GameObject Raggio;
     private GameObject clone;
 
+    public GameObject primo;
+    public GameObject secondo;
+    public GameObject terzo;
+
+
     public Timer clock;
 
     public Text punt;
@@ -46,9 +51,32 @@ public class GameManager : MonoBehaviour
     IEnumerator PrintPunteggio()
     {
         yield return new WaitForSeconds(0.2f);
+        Time.timeScale = 0;
         float punteggio = m_Secondi * 1000 / clock.counterTime * m_N_Citta / m_current_touch;
         Debug.Log("Finish!");
-        punt.text = Mathf.Ceil(punteggio).ToString("0000000");
+        primo.gameObject.SetActive(true);
+        secondo.gameObject.SetActive(true);
+        terzo.gameObject.SetActive(true);
+        if (punteggio >= 1000)
+        {
+            primo.transform.GetChild(1).gameObject.SetActive(true);
+            secondo.transform.GetChild(1).gameObject.SetActive(true);
+            terzo.transform.GetChild(1).gameObject.SetActive(true);
+        }
+        else if (punteggio >= 700 && punteggio < 1000)
+        {
+            primo.transform.GetChild(1).gameObject.SetActive(true);
+            secondo.transform.GetChild(1).gameObject.SetActive(true);
+            terzo.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        else
+        {
+            primo.transform.GetChild(1).gameObject.SetActive(true);
+            secondo.transform.GetChild(0).gameObject.SetActive(false);
+            terzo.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        punt.gameObject.SetActive(true);
+        punt.text = Mathf.Ceil(punteggio).ToString();
 
     }
 
