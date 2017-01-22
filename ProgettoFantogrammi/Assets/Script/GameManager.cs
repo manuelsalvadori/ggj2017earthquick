@@ -65,6 +65,8 @@ public class GameManager : MonoBehaviour
 
     public void shoot()
     {
+
+        GetComponents<AudioSource>()[1].Play();
         Handheld.Vibrate();
         Debug.Log("SHOOOOOOOT!");
         hitted = true;
@@ -80,6 +82,8 @@ public class GameManager : MonoBehaviour
             Debug.Log(hit.collider.gameObject.name);
             if (!hit.collider.tag.Equals("World"))
             {
+                GetComponents<AudioSource>()[0].Play();
+
                 m_current_city--;
                 GameObject tmp = GameObject.Instantiate(Effect);
                 tmp.transform.SetParent(world);

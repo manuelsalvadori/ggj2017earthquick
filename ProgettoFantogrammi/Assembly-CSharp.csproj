@@ -55,6 +55,7 @@
      <Compile Include="Assets\Script\Shockwave.cs" />
      <Compile Include="Assets\Script\Size.cs" />
      <Compile Include="Assets\Script\Stereo.cs" />
+     <Compile Include="Assets\Script\Timer.cs" />
      <Compile Include="Assets\Script\TouchRotation.cs" />
      <Compile Include="Assets\Script\anamorph.cs" />
      <Compile Include="Assets\Script\toggle3Dmode.cs" />
