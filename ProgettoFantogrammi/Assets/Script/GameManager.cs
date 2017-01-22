@@ -143,7 +143,7 @@ public class GameManager : MonoBehaviour
         Destroy(button);
         explosion.SetActive(true);
         yield return new WaitForSeconds(0.8f);
-        Destroy(world.gameObject);
+        world.gameObject.SetActive(false);
     }
 
     IEnumerator shutParticle(GameObject o)
