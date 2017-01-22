@@ -53,13 +53,11 @@ public class GameManager : MonoBehaviour
 
     IEnumerator PrintPunteggio()
     {
-        yield return new WaitForSeconds(0.2f);
-        Time.timeScale = 0;
+        yield return new WaitForSeconds(4f);
+        //Time.timeScale = 0;
         float punteggio = m_Secondi * 1000 / clock.counterTime * m_N_Citta / m_current_touch;
         Debug.Log("Finish!");
-        primo.gameObject.SetActive(true);
-        secondo.gameObject.SetActive(true);
-        terzo.gameObject.SetActive(true);
+        primo.transform.parent.gameObject.SetActive(true);
         if (punteggio >= 1000)
         {
             primo.transform.GetChild(1).gameObject.SetActive(true);
@@ -133,7 +131,7 @@ public class GameManager : MonoBehaviour
         }
         if (m_current_city == 0)
         {
-            
+
             StartCoroutine(destroyPlanet());
         }
 
