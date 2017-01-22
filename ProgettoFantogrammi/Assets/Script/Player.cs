@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
 
 	void Update ()
 	{
-		float emissiveIntensity = 1 - (currentPulseCooldown / pulseCooldown);
+
 		//material.SetColor ("_EmissionColor", new Color (emissiveIntensity, emissiveIntensity, emissiveIntensity));
 
 		if (currentPulseCooldown <= 0) {
