@@ -3582,8 +3582,9 @@ MonoBehaviour:
   mirino: {fileID: 50}
   Raggio: {fileID: 100002, guid: 21543d2b66928224f8a9536ff3811682, type: 2}
   clock: {fileID: 730536531}
+  punt: {fileID: 955763893}
   m_N_Citta: 7
-  m_Secondi: 10
+  m_Secondi: 18
   m_current_touch: 0
   m_current_city: 0
 --- !u!114 &222
@@ -3805,7 +3806,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationRate: 10
-  testo: {fileID: 0}
 --- !u!114 &237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5167,7 +5167,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 00:00:00
+  m_Text: 0000000
 --- !u!222 &955763894
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5943,7 +5943,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationRate: 30000
-  testo: {fileID: 955763893}
 --- !u!1 &1516728462
 GameObject:
   m_ObjectHideFlags: 0

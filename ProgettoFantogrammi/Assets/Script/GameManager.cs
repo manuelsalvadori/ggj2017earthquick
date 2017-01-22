@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
     private GameObject clone;
 
     public Timer clock;
+
+    public Text punt;
 
     public int m_N_Citta = 4;
     public int m_Secondi = 10;
@@ -43,7 +46,10 @@ public class GameManager : MonoBehaviour
     IEnumerator PrintPunteggio()
     {
         yield return new WaitForSeconds(0.2f);
+        float punteggio = m_Secondi * 1000 / clock.counterTime * m_N_Citta / m_current_touch;
         Debug.Log("Finish!");
+        punt.text = Mathf.Ceil(punteggio).ToString("0000000");
+
     }
 
     void LateUpdate()

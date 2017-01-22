@@ -6,7 +6,7 @@ public class TouchRotation : MonoBehaviour
 {
 
 	public float rotationRate = 1.5f;
-    public Text testo;
+    //public Text testo;
 
     private void Start()
     {
@@ -24,7 +24,7 @@ public class TouchRotation : MonoBehaviour
 			{
                 transform.Rotate((touch.deltaPosition.y) / Screen.currentResolution.height * rotationRate * Time.smoothDeltaTime, 0f,  -(touch.deltaPosition.x / Screen.currentResolution.width * rotationRate * Time.smoothDeltaTime), Space.World);
             }
-            testo.text = ((touch.deltaPosition.y) / Screen.currentResolution.height * rotationRate * Time.smoothDeltaTime).ToString();
+            //testo.text = ((touch.deltaPosition.y) / Screen.currentResolution.height * rotationRate * Time.smoothDeltaTime).ToString();
         }
 
 
