@@ -12,7 +12,6 @@ public class MenuManager : MonoBehaviour
     public GameObject creditz;
     public GameObject[] worlds;
     public Text backButton;
-    public Animation SW_text;
 
     int selected = 0;
 
@@ -27,7 +26,6 @@ public class MenuManager : MonoBehaviour
     {
         mainMenu.SetActive(false);
         creditz.SetActive(true);
-        SW_text.Play();
     }
 
     public void back()
