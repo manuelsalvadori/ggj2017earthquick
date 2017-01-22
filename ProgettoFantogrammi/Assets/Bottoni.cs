@@ -17,15 +17,6 @@ public class Bottoni : MonoBehaviour {
 
     public void back()
     {
-        Scene sc = SceneManager.GetActiveScene();
-        Camera.main.GetComponent<AudioListener>().enabled = false;
         SceneManager.LoadScene("Menu");
-        StartCoroutine(aspetta());
-    }
-
-    IEnumerator aspetta()
-    {
-        yield return new WaitForSeconds(1f);
-        GameObject.FindGameObjectWithTag("MainMenu").GetComponent<MenuManager>().startButton();
     }
 }

@@ -60,6 +60,7 @@
      <Compile Include="Assets\Script\TouchRotation.cs" />
      <Compile Include="Assets\Script\anamorph.cs" />
      <Compile Include="Assets\Script\toggle3Dmode.cs" />
+     <Compile Include="Assets\Starter.cs" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\Anaglyph_Balanced_Param.shader" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Guidelines.txt" />
