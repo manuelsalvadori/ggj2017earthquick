@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
         }
         if (m_current_city == 0)
         {
-
+            world.GetComponent<TouchRotation>().enabled = false;
             StartCoroutine(destroyPlanet());
         }
 
