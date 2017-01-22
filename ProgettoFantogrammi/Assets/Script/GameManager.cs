@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public GameObject Raggio;
     private GameObject clone;
 
+    public GameObject button;
+    public GameObject explosion;
+
     public Timer clock;
 
     public Text punt;
@@ -100,8 +103,21 @@ public class GameManager : MonoBehaviour
             }
 
         }
+        if (m_current_city == 0)
+        {
+            
+            StartCoroutine(destroyPlanet());
+        }
 
+    }
 
+    IEnumerator destroyPlanet()
+    {
+        yield return new WaitForSeconds(2.2f);
+        Destroy(button);
+        explosion.SetActive(true);
+        yield return new WaitForSeconds(0.8f);
+        Destroy(world.gameObject);
     }
 
     IEnumerator shutParticle(GameObject o)
