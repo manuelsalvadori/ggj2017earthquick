@@ -68,13 +68,13 @@ public class GameManager : MonoBehaviour
         {
             primo.transform.GetChild(1).gameObject.SetActive(true);
             secondo.transform.GetChild(1).gameObject.SetActive(true);
-            terzo.transform.GetChild(0).gameObject.SetActive(false);
+            terzo.transform.GetChild(0).gameObject.SetActive(true);
         }
         else
         {
             primo.transform.GetChild(1).gameObject.SetActive(true);
-            secondo.transform.GetChild(0).gameObject.SetActive(false);
-            terzo.transform.GetChild(0).gameObject.SetActive(false);
+            secondo.transform.GetChild(0).gameObject.SetActive(true);
+            terzo.transform.GetChild(0).gameObject.SetActive(true);
         }
         punt.gameObject.SetActive(true);
         punt.text = Mathf.Ceil(punteggio).ToString();
