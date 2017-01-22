@@ -20,6 +20,9 @@ public class MenuManager : MonoBehaviour
         mainMenu.SetActive(false);
         selectMenu.SetActive(true);
         models.SetActive(true);
+
+        selected = 0;
+        worlds[0].SetActive(true);
     }
 
     public void credits()
