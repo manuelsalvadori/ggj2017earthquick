@@ -1132,6 +1132,21 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 400134, guid: 3952ad63c36014a148a86f1068bdb85c, type: 3}
   m_PrefabInternal: {fileID: 907043488}
+--- !u!111 &894608408
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 894608406}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 9f404e4a12a9a904990bf085b8a3acae, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9f404e4a12a9a904990bf085b8a3acae, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &907043488
 Prefab:
   m_ObjectHideFlags: 0
@@ -1189,21 +1204,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400134, guid: 3952ad63c36014a148a86f1068bdb85c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.30695
+      value: 0.36420688
       objectReference: {fileID: 0}
     - target: {fileID: 400134, guid: 3952ad63c36014a148a86f1068bdb85c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.30696023
+      value: 0.3642191
       objectReference: {fileID: 0}
     - target: {fileID: 400134, guid: 3952ad63c36014a148a86f1068bdb85c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.30696023
+      value: 0.3642191
       objectReference: {fileID: 0}
     - target: {fileID: 100134, guid: 3952ad63c36014a148a86f1068bdb85c, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 3952ad63c36014a148a86f1068bdb85c, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 3952ad63c36014a148a86f1068bdb85c, type: 3}
   m_IsPrefabParent: 0
 --- !u!1001 &930816027
